@@ -16,7 +16,7 @@ horseman
 	.type('input#PRASYMO_NR_P0', String(config.requestID))
 	.type('input#code0', solver.solveCaptcha(config.captchaFile))
 	// clicks on submit button
-	g.click('.CTL_PLACE_LBL .yellow-btn input[type="button"]')
+	.click('.CTL_PLACE_LBL .yellow-btn input[type="button"]')
 	.waitForNextPage()
 	.screenshot(config.screenshotFile)
 	.close();
