@@ -19,7 +19,9 @@ var config = {
 	mailDetails: {
 		from: 'mail@example.com',
 		to: 'mail@example.com'
-	}
+	},
+	datesRegex: /2015\.09\.\d\d/gi,
+	cities: ['AL', 'KN', 'KL', 'MR', 'PN', 'SL', 'TR', 'TL', 'UT', 'VL', 'MZ', 'RK']
 };
 
 if(fs.existsSync(overridesFilepath)) {
