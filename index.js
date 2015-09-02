@@ -19,14 +19,14 @@ function processAllCities() {
 
 		regitra.destroy();
 
-		console.log('Waiting ' + (config.timeout / 1000) + ' seconds for another city');
+		debug.log('Waiting ' + (config.timeout / 1000) + ' seconds for another city');
 
 		setTimeout(function() { done = true; }, config.timeout);
 
 		deasync.loopWhile(function(){return !done;});
 	});
 
-	console.log('Finished all cities', new Date().toISOString(), 'Waiting for ' + (config.interval / 1000) + ' seconds');
+	debug.log('Finished all cities', new Date().toISOString(), 'Waiting for ' + (config.interval / 1000) + ' seconds');
 }
 
 processAllCities();
