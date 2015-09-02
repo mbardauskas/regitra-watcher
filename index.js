@@ -5,7 +5,7 @@ var config = require('./config/default');
 
 //process.env['TESSDATA_PREFIX'] = 'c:/server/Tesseract-OCR';
 
-while(true) {
+function processAllCities() {
 	config.cities.forEach(function(city) {
 		var regitra = RegitraBrowser.create();
 		var possible_dates = regitra.getDates(city);
@@ -17,4 +17,9 @@ while(true) {
 
 		regitra.destroy();
 	});
+
+	console.log('Finished all cities', new Date().toISOString(), 'Waiting for ' + (config.timeout / 1000) + ' seconds');
 }
+
+processAllCities();
+setInterval(processAllCities, config.timeout);

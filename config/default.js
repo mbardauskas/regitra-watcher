@@ -21,7 +21,8 @@ var config = {
 		to: 'mail@example.com'
 	},
 	datesRegex: /2015\.09\.\d\d/gi,
-	cities: ['AL', 'KN', 'KL', 'MR', 'PN', 'SL', 'TR', 'TL', 'UT', 'VL', 'MZ', 'RK']
+	cities: ['AL', 'KN', 'KL', 'MR', 'PN', 'SL', 'TR', 'TL', 'UT', 'VL', 'MZ', 'RK'],
+	timeout: 1000*60*7 // 7 mins
 };
 
 if(fs.existsSync(overridesFilepath)) {
