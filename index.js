@@ -14,7 +14,7 @@ function processAllCities() {
 
 		var matches = possible_dates.match(config.datesRegex);
 		if(matches) {
-			mailer.sendMail(matches.join(', '));
+			mailer.sendMail('City: ' + city + '; Dates: ' + matches.join(', '));
 		}
 
 		regitra.destroy();
